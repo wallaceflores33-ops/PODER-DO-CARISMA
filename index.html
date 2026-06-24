@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poder do Carisma</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '3895613260575911');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=3895613260575911&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<script src="https://supermago.b-cdn.net/supermago.js?ver=20250224" defer></script>
+<style>
+:root{
+  --gold:#C9A84C;--gold-light:#E8C97A;--gold-dim:#8B6E30;
+  --bg:#0A0A0A;--bg2:#111111;--bg3:#181818;--bg4:#1F1F1F;
+  --text:#F0EDE6;--muted:#888880;--border:rgba(201,168,76,0.18);
+  --red:#E24B4A;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
+
+/* TICKER */
+.ticker{background:var(--gold);padding:9px 0;overflow:hidden}
+.ticker-inner{display:flex;animation:tick 22s linear infinite;white-space:nowrap}
+.ticker-inner span{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#0A0A0A;padding:0 28px}
+@keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* NAV */
+nav{padding:18px 24px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border)}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.2em;color:var(--gold)}
+
+/* UTILS */
+.label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:block}
+.sec{padding:80px 24px}
+.sec-inner{max-width:820px;margin:0 auto}
+.sec-inner.narrow{max-width:660px}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,0.08);border:1px solid var(--border);border-radius:100px;padding:6px 18px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-light);margin-bottom:28px}
+.dot-pulse{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.6)}}
+.big-h{font-family:'Bebas Neue',sans-serif;line-height:.93;color:#fff}
+.gold{color:var(--gold)}
+
+/* CTA BTN */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--gold);color:#0A0A0A;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;padding:18px 40px;border-radius:4px;border:none;cursor:pointer;transition:all .2s}
+.btn:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 20px 50px rgba(201,168,76,.3)}
+.btn svg{width:15px;height:15px;flex-shrink:0}
+.btn-full{width:100%;max-width:480px}
+
+/* ═══════════════════════════════
+   BLOCO 01 — HERO
+═══════════════════════════════ */
+.hero{min-height:94vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:64px 24px 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 65% 55% at 50% 45%,rgba(201,168,76,.07) 0%,transparent 70%);pointer-events:none}
+.hero .big-h{font-size:clamp(58px,11vw,108px);margin-bottom:22px}
+.hero .big-h em{color:var(--gold);font-style:normal;display:block}
+.hero-sub{font-size:clamp(15px,2vw,19px);color:var(--muted);max-width:560px;margin:0 auto 16px;font-weight:300;line-height:1.75}
+.hero-sub strong{color:var(--text);font-weight:600}
+.hero-bullets{display:flex;flex-direction:column;gap:10px;margin:28px auto 44px;max-width:500px;text-align:left}
+.hero-bullet{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--text)}
+.hero-bullet .chk{width:20px;height:20px;border-radius:50%;background:rgba(201,168,76,.12);border:1px solid var(--gold-dim);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.hero-bullet .chk svg{width:10px;height:10px;color:var(--gold)}
+.hero-mockup{width:100%;max-width:300px;border-radius:16px;margin:0 auto 44px;display:block;filter:drop-shadow(0 40px 80px rgba(201,168,76,.18))}
+.trust-row{display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+.trust-item svg{width:13px;height:13px;color:var(--gold-dim)}
+
+/* ═══════════════════════════════
+   BLOCO 02 — VANTAGENS
+═══════════════════════════════ */
+.vant{background:var(--bg2)}
+.vant-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:44px}
+.vant-card{background:var(--bg3);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:26px 22px;display:flex;gap:16px;align-items:flex-start;transition:border-color .2s}
+.vant-card:hover{border-color:var(--border)}
+.vant-num{font-family:'Bebas Neue',sans-serif;font-size:36px;color:rgba(201,168,76,.2);line-height:1;flex-shrink:0;width:40px}
+.vant-card h3{font-size:15px;font-weight:600;color:#fff;margin-bottom:6px}
+.vant-card p{font-size:13px;color:var(--muted);line-height:1.6}
+
+/* ═══════════════════════════════
+   BLOCO 03 — ENTREGÁVEIS
+═══════════════════════════════ */
+.entrega{background:var(--bg)}
+.entrega-header{margin-bottom:52px}
+.entrega-grid{display:flex;flex-direction:column;gap:2px}
+.entrega-item{border:1px solid rgba(255,255,255,.06);border-radius:10px;overflow:hidden;transition:border-color .2s}
+.entrega-item:hover{border-color:var(--border)}
+.entrega-top{display:flex;align-items:center;gap:16px;padding:22px 24px;background:var(--bg2)}
+.entrega-icon{width:40px;height:40px;border-radius:8px;background:rgba(201,168,76,.08);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.entrega-icon svg{width:18px;height:18px;color:var(--gold)}
+.entrega-title{font-size:16px;font-weight:600;color:#fff}
+.entrega-body{background:var(--bg3);padding:20px 24px 22px 80px}
+.entrega-body ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.entrega-body ul li{font-size:14px;color:var(--muted);display:flex;align-items:flex-start;gap:10px;line-height:1.55}
+.entrega-body ul li::before{content:'→';color:var(--gold);flex-shrink:0;font-size:13px;margin-top:1px}
+
+/* ═══════════════════════════════
+   BLOCO 04 — PARA QUEM É
+═══════════════════════════════ */
+.paraquem{background:var(--bg2);text-align:center}
+.paraquem-inner{max-width:680px;margin:0 auto}
+.paraquem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:44px}
+.pq-card{background:var(--bg3);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:28px 20px;text-align:left}
+.pq-card .pq-ico{font-size:28px;margin-bottom:14px}
+.pq-card h3{font-size:15px;font-weight:600;color:#fff;margin-bottom:6px}
+.pq-card p{font-size:13px;color:var(--muted);line-height:1.6}
+.paraquem-not{margin-top:40px;padding:24px;background:rgba(226,75,74,.06);border:1px solid rgba(226,75,74,.15);border-radius:12px;text-align:left}
+.paraquem-not h4{font-size:14px;font-weight:600;color:var(--red);margin-bottom:14px;letter-spacing:.05em;text-transform:uppercase}
+.paraquem-not ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.paraquem-not ul li{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:10px}
+.paraquem-not ul li::before{content:'✗';color:var(--red);flex-shrink:0;font-weight:700}
+
+/* ═══════════════════════════════
+   BLOCO 05 — BÔNUS
+═══════════════════════════════ */
+.bonus{background:var(--bg)}
+.bonus-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:48px}
+.bonus-card{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:30px 26px;position:relative;overflow:hidden}
+.bonus-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold-dim),var(--gold),var(--gold-dim))}
+.bonus-tag{display:inline-block;background:rgba(201,168,76,.1);color:var(--gold);font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:16px;font-weight:600}
+.bonus-card h3{font-size:18px;font-weight:700;color:#fff;margin-bottom:6px;line-height:1.25}
+.bonus-card .bonus-desc{font-size:13px;color:var(--muted);margin-bottom:18px;line-height:1.6}
+.bonus-card ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.bonus-card ul li{font-size:13px;color:var(--text);display:flex;align-items:flex-start;gap:10px;line-height:1.5}
+.bonus-card ul li::before{content:'✓';color:var(--gold);flex-shrink:0;font-weight:700;font-size:12px;margin-top:1px}
+
+/* ═══════════════════════════════
+   BLOCO 06 — OFERTA
+═══════════════════════════════ */
+.oferta{background:var(--bg2);text-align:center}
+.oferta-inner{max-width:680px;margin:0 auto}
+.recap-box{background:var(--bg3);border:1px solid var(--border);border-radius:14px;padding:32px 28px;margin:36px 0;text-align:left}
+.recap-box h3{font-size:14px;font-weight:600;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px}
+.recap-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+.recap-list li{font-size:14px;color:var(--text);display:flex;align-items:flex-start;gap:12px;line-height:1.55}
+.recap-list li .rc-ico{width:20px;height:20px;border-radius:50%;background:rgba(201,168,76,.12);border:1px solid var(--gold-dim);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.recap-list li .rc-ico svg{width:10px;height:10px;color:var(--gold)}
+.price-block{margin:40px auto;text-align:center}
+.price-from{font-size:15px;color:var(--muted);text-decoration:line-through;margin-bottom:6px}
+.price-main{font-family:'Bebas Neue',sans-serif;font-size:clamp(72px,16vw,110px);color:var(--gold);line-height:.88;letter-spacing:-.01em}
+.price-main sup{font-size:.32em;vertical-align:top;margin-top:.35em}
+.price-detail{font-size:13px;color:var(--muted);margin-top:12px}
+.oferta-badges{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.obadge{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+.obadge svg{width:13px;height:13px;color:var(--gold-dim)}
+
+/* ═══════════════════════════════
+   BLOCO 07 — GARANTIA
+═══════════════════════════════ */
+.garantia{background:var(--bg);text-align:center}
+.garantia-box{max-width:560px;margin:0 auto;background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:52px 40px}
+.garantia-badge{width:80px;height:80px;border-radius:50%;background:rgba(201,168,76,.1);border:2px solid var(--gold-dim);display:flex;align-items:center;justify-content:center;margin:0 auto 28px}
+.garantia-badge svg{width:36px;height:36px;color:var(--gold)}
+.garantia-box h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,54px);color:#fff;margin-bottom:16px}
+.garantia-box p{font-size:15px;color:var(--muted);line-height:1.7;max-width:420px;margin:0 auto}
+.garantia-box p strong{color:var(--text);font-weight:500}
+
+/* ═══════════════════════════════
+   BLOCO 08 — FAQ
+═══════════════════════════════ */
+.faq{background:var(--bg2)}
+.faq-list{margin-top:44px;display:flex;flex-direction:column;gap:2px}
+.faq-item{border:1px solid rgba(255,255,255,.06);border-radius:8px;overflow:hidden}
+.faq-q{width:100%;background:var(--bg3);border:none;padding:20px 24px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;color:var(--text);text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;transition:background .2s}
+.faq-q:hover{background:var(--bg4)}
+.faq-q .faq-icon{width:22px;height:22px;border-radius:50%;background:rgba(201,168,76,.1);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .25s,background .2s}
+.faq-q .faq-icon svg{width:10px;height:10px;color:var(--gold);transition:transform .25s}
+.faq-q.open .faq-icon{background:rgba(201,168,76,.2)}
+.faq-q.open .faq-icon svg{transform:rotate(45deg)}
+.faq-a{background:var(--bg2);font-size:14px;color:var(--muted);line-height:1.7;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;padding:0 24px}
+.faq-a.open{max-height:200px;padding:16px 24px 22px}
+
+/* FINAL CTA */
+.final{background:var(--bg);text-align:center;padding:100px 24px;position:relative;overflow:hidden}
+.final::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 55% at 50% 50%,rgba(201,168,76,.06) 0%,transparent 70%)}
+.final .closing{font-family:'DM Sans',sans-serif;font-style:italic;font-size:clamp(18px,3vw,24px);color:var(--muted);max-width:520px;margin:0 auto 44px;line-height:1.5;font-weight:300}
+.final .closing em{color:var(--text);font-style:normal;font-weight:500}
+
+/* FOOTER */
+footer{padding:28px 24px;text-align:center;border-top:1px solid var(--border)}
+footer p{font-size:12px;color:var(--muted)}
+
+@media(max-width:480px){
+  .entrega-body{padding-left:24px}
+  .garantia-box{padding:36px 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span>Acesso Imediato</span><span>•</span><span>Compra 100% Segura</span><span>•</span><span>Garantia de 7 Dias</span><span>•</span><span>Acesso Vitalício</span><span>•</span><span>R$ 9,90 Apenas Hoje</span><span>•</span>
+    <span>Acesso Imediato</span><span>•</span><span>Compra 100% Segura</span><span>•</span><span>Garantia de 7 Dias</span><span>•</span><span>Acesso Vitalício</span><span>•</span><span>R$ 9,90 Apenas Hoje</span><span>•</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav><div class="logo">Poder do Carisma</div></nav>
+
+<!-- ═══ BLOCO 01 — HERO ═══ -->
+<section class="hero">
+  <div class="eyebrow"><div class="dot-pulse"></div>Oferta especial de lançamento</div>
+  <h1 class="big-h" style="font-size:clamp(58px,11vw,110px);margin-bottom:20px">
+    O HOMEM QUE<em>DOMINA O AMBIENTE</em>
+  </h1>
+  <p class="hero-sub">
+    Desenvolva uma <strong>presença masculina magnética</strong> que atrai respeito, atenção e interesse feminino — de forma natural, sem forçar e sem scripts.
+  </p>
+  <div class="hero-bullets">
+    <div class="hero-bullet">
+      <div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <span>Linguagem corporal que projeta autoridade instantânea</span>
+    </div>
+    <div class="hero-bullet">
+      <div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <span>Tom de voz e olhar que criam tensão e interesse real</span>
+    </div>
+    <div class="hero-bullet">
+      <div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <span>Energia dominante que faz as pessoas quererem estar perto</span>
+    </div>
+    <div class="hero-bullet">
+      <div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <span>Acesso vitalício por apenas R$9,90 — sem mensalidade</span>
+    </div>
+  </div>
+  <img class="hero-mockup" src="https://qtbkvshbmqlszncxlcuc.supabase.co/storage/v1/object/public/dsl-uploads/sZAxO6RVOcZDR4Ev1t8XPnDNQqf1/44c60a0e-d22c-4f47-9556-73b4f9f66ffb.png" alt="Poder do Carisma">
+  <a href="https://pay.kiwify.com.br/g5mVCLy" class="btn btn-full" style="margin-bottom:28px">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+    Quero Desbloquear meu Carisma Agora
+  </a>
+  <div class="trust-row">
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Compra segura</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Acesso imediato</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Garantia 7 dias</span>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ BLOCO 02 — VANTAGENS ═══ -->
+<section class="sec vant">
+  <div class="sec-inner">
+    <span class="label">Por que escolher</span>
+    <h2 class="big-h" style="font-size:clamp(38px,6vw,60px);margin-bottom:8px">6 Razões Para Garantir<span class="gold"> Agora</span></h2>
+    <p style="font-size:15px;color:var(--muted);max-width:540px">Isso não é mais um curso de sedução. É um sistema de reprogramação da sua presença.</p>
+    <div class="vant-grid">
+      <div class="vant-card">
+        <div class="vant-num">01</div>
+        <div><h3>Resultado Visível em Dias</h3><p>Técnicas práticas aplicáveis desde o primeiro módulo — sem teoria vazia, sem esperar semanas.</p></div>
+      </div>
+      <div class="vant-card">
+        <div class="vant-num">02</div>
+        <div><h3>Sem Scripts ou Frases Prontas</h3><p>Você desenvolve carisma genuíno. Nada de decorar falas ou fingir ser quem não é.</p></div>
+      </div>
+      <div class="vant-card">
+        <div class="vant-num">03</div>
+        <div><h3>Funciona em Qualquer Contexto</h3><p>No trabalho, com amigos, em abordagens — presença magnética abre portas em todos os ambientes.</p></div>
+      </div>
+      <div class="vant-card">
+        <div class="vant-num">04</div>
+        <div><h3>Acesso Vitalício + Atualizações</h3><p>Uma vez dentro, você tem acesso para sempre — incluindo todo novo conteúdo adicionado.</p></div>
+      </div>
+      <div class="vant-card">
+        <div class="vant-num">05</div>
+        <div><h3>Investimento Quase Zero</h3><p>Conteúdo que vale centenas de reais, disponível por R$9,90. Sem desculpas para não começar.</p></div>
+      </div>
+      <div class="vant-card">
+        <div class="vant-num">06</div>
+        <div><h3>Risco Zero com Garantia</h3><p>7 dias para testar sem compromisso. Não gostou? Devolvemos 100% sem perguntas.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ BLOCO 03 — ENTREGÁVEIS ═══ -->
+<section class="sec entrega">
+  <div class="sec-inner">
+    <div class="entrega-header">
+      <span class="label">O que está dentro</span>
+      <h2 class="big-h" style="font-size:clamp(38px,6vw,62px);margin-bottom:12px">Tudo Que Você<span class="gold"> Vai Receber</span></h2>
+      <p style="font-size:15px;color:var(--muted);max-width:520px">Cada módulo foi desenhado para eliminar uma fraqueza específica e instalar uma nova habilidade.</p>
+    </div>
+    <div class="entrega-grid">
+
+      <div class="entrega-item">
+        <div class="entrega-top">
+          <div class="entrega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div class="entrega-title">Módulo 1 — Presença que Comanda</div>
+        </div>
+        <div class="entrega-body">
+          <ul>
+            <li>Como calibrar sua postura para transmitir autoridade sem arrogância</li>
+            <li>Os gestos que homens magnéticos usam (e os que sabotam sua imagem)</li>
+            <li>O segredo do espaço: como ocupar o ambiente e ser notado sem dizer nada</li>
+            <li>Exercício prático de ancoragem de estado para usar antes de qualquer situação social</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entrega-item">
+        <div class="entrega-top">
+          <div class="entrega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+          <div class="entrega-title">Módulo 2 — O Olhar Que Conecta</div>
+        </div>
+        <div class="entrega-body">
+          <ul>
+            <li>O contato visual dominante que gera interesse imediato sem parecer agressivo</li>
+            <li>Como sustentar o olhar e criar tensão magnética em qualquer interação</li>
+            <li>A técnica do "triângulo social" usada por líderes e pessoas carismáticas</li>
+            <li>Como olhar para uma mulher de forma que ela não consiga te ignorar</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entrega-item">
+        <div class="entrega-top">
+          <div class="entrega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+          <div class="entrega-title">Módulo 3 — Tom de Voz que Seduz</div>
+        </div>
+        <div class="entrega-body">
+          <ul>
+            <li>Como projetar sua voz para soar confiante e natural em qualquer situação</li>
+            <li>O ritmo ideal da fala: por que falar devagar é sinal de poder real</li>
+            <li>Exercícios de ressonância para tornar sua voz mais profunda e cativante</li>
+            <li>Como usar pausas estratégicas que aumentam sua autoridade imediatamente</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entrega-item">
+        <div class="entrega-top">
+          <div class="entrega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <div class="entrega-title">Módulo 4 — Energia e Intenção</div>
+        </div>
+        <div class="entrega-body">
+          <ul>
+            <li>Como cultivar o estado interno que faz as pessoas quererem estar perto de você</li>
+            <li>A diferença entre energia carente e energia abundante — e como mudar isso agora</li>
+            <li>Técnicas de ancoragem emocional para entrar no estado magnético em minutos</li>
+            <li>Como agir com propósito e eliminar a hesitação que destrói oportunidades</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entrega-item">
+        <div class="entrega-top">
+          <div class="entrega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <div class="entrega-title">Módulo 5 — Conversas que Prendem</div>
+        </div>
+        <div class="entrega-body">
+          <ul>
+            <li>Como nunca mais ficar sem assunto — o método do "gancho contínuo"</li>
+            <li>Escuta ativa avançada que faz o outro se sentir fascinado por você</li>
+            <li>A arte de liderar a conversa sem parecer controlador ou forçado</li>
+            <li>Quando e como usar humor para criar conexão genuína e desarmante</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ BLOCO 04 — PARA QUEM É ═══ -->
+<section class="sec paraquem">
+  <div class="sec-inner paraquem-inner">
+    <span class="label">Para quem é</span>
+    <h2 class="big-h" style="font-size:clamp(38px,6vw,60px);margin-bottom:12px">Este Material É<span class="gold"> Para Você Se…</span></h2>
+    <div class="paraquem-grid">
+      <div class="pq-card">
+        <div class="pq-ico">🧍</div>
+        <h3>Você se sente invisível</h3>
+        <p>Está em grupos, eventos ou situações sociais e ninguém parece te notar de verdade.</p>
+      </div>
+      <div class="pq-card">
+        <div class="pq-ico">😓</div>
+        <h3>Você trava na abordagem</h3>
+        <p>Quer falar com alguém mas a insegurança paralisa — e a oportunidade passa.</p>
+      </div>
+      <div class="pq-card">
+        <div class="pq-ico">🤝</div>
+        <h3>Você quer mais respeito</h3>
+        <p>No trabalho, nas amizades ou em relacionamentos — você quer que sua presença seja sentida.</p>
+      </div>
+      <div class="pq-card">
+        <div class="pq-ico">💬</div>
+        <h3>Conversas não evoluem</h3>
+        <p>Você consegue começar uma conversa, mas ela esfria rápido e não sabe como manter o interesse.</p>
+      </div>
+    </div>
+    <div class="paraquem-not">
+      <h4>Este material NÃO é para você se…</h4>
+      <ul>
+        <li>Você busca truques de manipulação ou formas de enganar pessoas</li>
+        <li>Você não está disposto a praticar o que aprende</li>
+        <li>Você quer resultado sem nenhum esforço pessoal</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ BLOCO 05 — BÔNUS ═══ -->
+<section class="sec bonus">
+  <div class="sec-inner">
+    <span class="label">Presentes exclusivos</span>
+    <h2 class="big-h" style="font-size:clamp(38px,6vw,60px);margin-bottom:12px">Bônus Que<span class="gold"> Aceleram Tudo</span></h2>
+    <p style="font-size:15px;color:var(--muted);max-width:500px">Ao garantir seu acesso hoje, você leva mais duas ferramentas poderosas sem custo adicional.</p>
+    <div class="bonus-grid">
+      <div class="bonus-card">
+        <div class="bonus-tag">Bônus 01 — Exclusivo</div>
+        <h3>Instinto Magnético</h3>
+        <p class="bonus-desc">O despertar do seu poder de atração natural — como criar interesse sem palavras.</p>
+        <ul>
+          <li>Como criar tensão sexual silenciosa sem dizer nada</li>
+          <li>Linguagem corporal de poder que ativa atração automática</li>
+          <li>Os 3 gatilhos de atração que a maioria dos homens desconhece</li>
+          <li>Como se tornar o homem que ela continua pensando depois que saiu</li>
+        </ul>
+      </div>
+      <div class="bonus-card">
+        <div class="bonus-tag">Bônus 02 — Exclusivo</div>
+        <h3>Conversa Que Prende</h3>
+        <p class="bonus-desc">Mantenha qualquer pessoa interessada e viciada na sua presença e nas suas palavras.</p>
+        <ul>
+          <li>A técnica de Push-Pull que cria dependência emocional saudável</li>
+          <li>Escuta ativa que seduz: como ouvir de um jeito que fascina</li>
+          <li>Como liderar a interação sem parecer controlador</li>
+          <li>Os tópicos que criam conexão profunda nos primeiros 5 minutos</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ BLOCO 06 — OFERTA ═══ -->
+<section class="sec oferta">
+  <div class="sec-inner oferta-inner" style="text-align:center">
+    <span class="label">Oferta especial</span>
+    <h2 class="big-h" style="font-size:clamp(44px,8vw,80px);margin-bottom:8px">O Cara Que<em class="gold" style="font-style:normal;display:block">Elas Lembram</em></h2>
+    <p style="font-size:15px;color:var(--muted);max-width:480px;margin:0 auto">Recapitulando tudo que você leva com seu investimento hoje:</p>
+
+    <div class="recap-box">
+      <h3>Você recebe tudo isso:</h3>
+      <ul class="recap-list">
+        <li>
+          <div class="rc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span><strong>Módulo 1</strong> — Presença que Comanda</span>
+        </li>
+        <li>
+          <div class="rc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span><strong>Módulo 2</strong> — O Olhar Que Conecta</span>
+        </li>
+        <li>
+          <div class="rc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span><strong>Módulo 3</strong> — Tom de Voz que Seduz</span>
+        </li>
+        <li>
+          <div class="rc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span><strong>Módulo 4</strong> — Energia e Intenção</span>
+        </li>
+        <li>
+          <div class="rc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span><strong>Módulo 5</strong> — Conversas que Prendem</span>
+        </li>
+        <li>
+          <div class="rc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span><strong>Bônus 1</strong> — Instinto Magnético (valor: R$47)</span>
+        </li>
+        <li>
+          <div class="rc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span><strong>Bônus 2</strong> — Conversa Que Prende (valor: R$47)</span>
+        </li>
+        <li>
+          <div class="rc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span><strong>Acesso vitalício</strong> com todas as futuras atualizações</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="price-block">
+      <p class="price-from">Tudo isso por apenas (de R$197,00)</p>
+      <div class="price-main"><sup>R$</sup>9<sup>,90</sup></div>
+      <p class="price-detail">Pagamento único · Acesso vitalício · Sem mensalidade</p>
+    </div>
+
+    <a href="https://pay.kiwify.com.br/g5mVCLy" class="btn btn-full" style="margin:0 auto 28px;display:flex">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      Quero Garantir Meu Acesso Agora
+    </a>
+    <div class="oferta-badges">
+      <span class="obadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Garantia 7 dias</span>
+      <span class="obadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Pagamento seguro</span>
+      <span class="obadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Acesso imediato</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ BLOCO 07 — GARANTIA ═══ -->
+<section class="sec garantia">
+  <div class="garantia-box">
+    <div class="garantia-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+    <h2>Garantia Total de 7 Dias</h2>
+    <p>Acesse todo o conteúdo, aplique as técnicas e veja os resultados. Se por qualquer motivo você não ficar satisfeito, basta enviar um e-mail em até <strong>7 dias</strong> e devolvemos <strong>100% do seu dinheiro</strong> — sem perguntas, sem burocracia.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ BLOCO 08 — FAQ ═══ -->
+<section class="sec faq">
+  <div class="sec-inner narrow">
+    <span class="label">Dúvidas frequentes</span>
+    <h2 class="big-h" style="font-size:clamp(36px,5vw,54px);margin-bottom:6px">Perguntas <span class="gold">& Respostas</span></h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          O acesso é realmente imediato?
+          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+        </button>
+        <div class="faq-a">Sim. Assim que o pagamento for confirmado, você recebe os dados de acesso direto no seu e-mail. Em segundos você já está dentro do conteúdo.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Funciona para homens introvertidos?
+          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+        </button>
+        <div class="faq-a">Especialmente para eles. Carisma não é sobre ser o mais falante do ambiente — é sobre transmitir presença de forma autêntica. Introvertidos que aplicam isso tornam-se magnéticos justamente por causa da sua calma natural.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Vou aprender a abordar mulheres?
+          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+        </button>
+        <div class="faq-a">Mais do que isso. Você vai desenvolver uma presença que faz com que as abordagens fluam de forma natural — sem depender de scripts ou técnicas forçadas que qualquer pessoa percebe.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          O conteúdo é atualizado?
+          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+        </button>
+        <div class="faq-a">Sim. Sempre que novos módulos ou materiais forem adicionados, você recebe acesso automático sem pagar nada a mais. É um investimento que só valoriza com o tempo.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          E se eu não gostar?
+          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+        </button>
+        <div class="faq-a">Você tem 7 dias de garantia total. Se não ficar satisfeito por qualquer razão, basta enviar um e-mail e devolvemos 100% do valor — sem questionamentos e sem burocracia.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <p class="closing">"A forma como o mundo te enxerga muda<br><em>quando a sua presença muda."</em></p>
+  <a href="https://pay.kiwify.com.br/g5mVCLy" class="btn btn-full" style="margin:0 auto;display:flex">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+    Começar Minha Transformação Agora
+  </a>
+</section>
+
+<footer>
+  <p>© 2024 Poder do Carisma · Todos os direitos reservados</p>
+</footer>
+
+<script>
+function toggleFaq(btn){
+  const a=btn.nextElementSibling;
+  const isOpen=a.classList.contains('open');
+  document.querySelectorAll('.faq-a.open').forEach(el=>{el.classList.remove('open')});
+  document.querySelectorAll('.faq-q.open').forEach(el=>{el.classList.remove('open')});
+  if(!isOpen){a.classList.add('open');btn.classList.add('open')}
+}
+</script>
+</body>
+</html>
